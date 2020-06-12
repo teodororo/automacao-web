@@ -1,5 +1,5 @@
 ## Automação web 
-Automação de sistema web utilizando Selenium + PYTHON. 
+Automação de sistema web utilizando Selenium + PYTHON. <br>
 Site-alvo: https://www.saucedemo.com/
 
 ## Dependências
