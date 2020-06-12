@@ -28,8 +28,7 @@ class SaucedemoAutomationTest(unittest.TestCase):
         name_field.send_keys("admin")
         password_field.send_keys("admin")
         login_btn.click()
-        self.assertTrue(
-            "Username and password do not match any user in this service" in self.driver.page_source)
+        self.assertTrue("Username and password do not match any user in this service" in self.driver.page_source)
 
     def test_validLogin(self):
         self.driver.get(self.baseUrl)
@@ -63,8 +62,7 @@ class SaucedemoAutomationTest(unittest.TestCase):
         shopping_cart.click()
         try:
             # if it raises an error, then the button isn't displayed
-            item = self.driver.find_element_by_xpath(
-                "//button[text()='REMOVE']")
+            item = self.driver.find_element_by_xpath("//button[text()='REMOVE']")
         except:
             self.assertTrue
 
@@ -73,8 +71,7 @@ class SaucedemoAutomationTest(unittest.TestCase):
         bnt_checkout = self.driver.find_element_by_xpath(
             "//div[@class='checkout_buttons']//input[1]")
         bnt_checkout.click()
-        self.assertTrue(
-            "Error: First Name is required" in self.driver.page_source)
+        self.assertTrue("Error: First Name is required" in self.driver.page_source)
 
     def test_validCheckout(self):
         self.driver.get(self.baseUrl + "checkout-step-one.html")
